@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>ChatServer</title>
+</head>
+<body>
+    <div id="content">
+        <div id="chatpane">
+            <div id="messagepane">
+                <ul id="messages">
+                </ul>
+            </div>
+            <div id="info">
+                <ul id="users">
+                </ul>
+                <div id="usercount">
+                    <p id="usercountfield">Conneted users: 0</p>
+                </div>
+            </div>
+        </div>
+        <form action="" id="usermessage"><input type="text" id="message"><button id="send">Send</button></form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="/js/chatserver.js"></script>
+</body>
+</html>

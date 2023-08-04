@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#chatpane {
+	flex-grow: 1;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	overflow: hidden;
+}
+
+#messagepane {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-rows: 100%;
+	grid-template-columns: 100%;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#messages {
+	background-color: lightgray;
+	margin: 5px;
+	overflow-y: scroll;
+	border-radius: 10px;
+}
+
+#info {
+	margin: 5px;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	grid-template: (1fr);
+	overflow: hidden;
+}
+
+#usercount {
+	display: flex;
+	background-color: lightgray;
+	align-items: center;
+	padding: 10px;
+	min-height: 35px;
+	max-height: 35px;
+	border-radius: 10px;
+}
+
+#users {
+	flex-grow: 1;
+	background-color: lightgray;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	overflow: scroll;
+}
+
+#usermessage {
+	display: flex;
+	min-height: 35px;
+	max-height: 35px;
+	padding: 5px;
+}
+
+#usermessage input {
+	flex-grow: 1;
+	margin-right: 10px;
+	border-color: lightgray;
+	border-radius: 10px;
+}
+
+#usermessage button {
+	width: 75px;
+	border-radius: 10px;
+	background-color: lightskyblue;
+	border-style: none;
+}
+
+#usermessage button:hover {
+	background-color: rgb(55, 55, 247);
+	color: white;
+}
+
+#usermessage button:active {
+	background-color: white;
+	border-style: solid;
+	color: black;
+}
+
+ul {
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+}
