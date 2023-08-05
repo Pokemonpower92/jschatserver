@@ -21,6 +21,7 @@ io.on("connection", (socket) => {
 	const socket_id = socket.id;
 
 	socket.on("user connected", (username) => {
+		console.log(`New user connected: ${username}`);
 		users[socket_id] = username;
 		io.emit("new user", username, users);
 	});
@@ -28,10 +29,12 @@ io.on("connection", (socket) => {
 	socket.on("disconnect", (data) => {
 		const disconnect_user = users[socket_id];
 		delete users[socket_id];
+		console.log(`User disconnected: ${disconnect_user}`);
 		io.emit("disconnect user", disconnect_user, users);
 	});
 
 	socket.on("new message", (msg) => {
+		console.log(`Broadcasting message: ${msg}`);
 		io.emit("new message", msg);
 	});
 });
